@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+        // 飛ばしたい2人のインスタURLをここに入れる
+        const urls = [
+            "https://www.instagram.com/sakashu0212?igsh=OGlleTJjeWJvaWF2",
+            "https://www.instagram.com/mako._.chii?igsh=c3M4ODAzN2czeHFv"
+        ];
+
+        // ランダムに1つ選んでリダイレクト
+        const target = urls[Math.floor(Math.random() * urls.length)];
+        window.location.replace(target);
+    </script>
+</head>
+<body>
+    <p>自動で移動します。移動しない場合は<a id="manual-link" href="#">こちら</a>をクリックしてください。</p>
+    <script>
+        document.getElementById('manual-link').href = target;
+    </script>
+</body>
+</html>
